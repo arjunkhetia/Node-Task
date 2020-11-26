@@ -5,7 +5,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  db.get().collection('mongocollection')
+  db.get().collection('users')
   .find({})
   .toArray(function(err, result) {
       if(err) throw err;

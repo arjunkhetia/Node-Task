@@ -5,8 +5,6 @@ var URI = "mongodb://localhost:27017";
 var connection = null;
 
 var option = {
-  reconnectTries : 5,
-  reconnectInterval: 1000,
   keepAlive: true,
   poolSize : 10,
   connectTimeoutMS: 5000,
@@ -19,7 +17,7 @@ var MongoDBClient = new MongoClient(URI, option);
 module.exports.connect = () => new Promise((resolve, reject) => {
     MongoDBClient.connect(function(err, client) {
         if (err) { reject(err); return; };
-        var db = client.db('mongodb');
+        var db = client.db('nodetaskdb');
         resolve(db);
         connection = db;
     });
