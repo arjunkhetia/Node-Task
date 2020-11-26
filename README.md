@@ -29,7 +29,7 @@ $ npm start
 
 Nodemon will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application.
 
-Start Express.js app with nodemon at `http://localhost:3000/`:
+Start Express.js app with nodemon at `http://localhost:5000/`:
 
 ```bash
 $ nodemon bin/www
@@ -41,7 +41,7 @@ Node PortFinder is a tool to find an open port or domain socket on the machine.
 
 ```js
 var portfinder = require('portfinder');
-var port = 3000;
+var port = 5000;
 var portSpan = 999;
 portfinder.getPort({
   port: port,    // minimum port number
@@ -167,7 +167,7 @@ app.use(require('express-status-monitor')({
     protocol: 'http', // protocol
     host: 'localhost' // server host name
     path: '/users', // endpoint to check status
-    port: '3000' // server port
+    port: '5000' // server port
   }] // health check will be considered successful if the endpoint returns a 200 status code
 }));
 ```
