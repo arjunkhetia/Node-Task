@@ -9,7 +9,7 @@ var cluster = require('cluster');
 var workers = 1;
 // uncomment below line to start cluster with maximum workers
 // var workers = process.env.WORKERS || require('os').cpus().length;
-var port = 3000;
+var port = 5000;
 var portSpan = 999;
 
 if (cluster.isMaster) {
